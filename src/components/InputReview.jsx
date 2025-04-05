@@ -32,8 +32,12 @@ function InputReview() {
             review: inputValue,
             selectedRate: localStorage.getItem("selectedRate"),
         };
-        localStorage.setItem("review", JSON.stringify(reviewData));
+        const existingReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        existingReviews.push(reviewData);
+        localStorage.setItem("reviews", JSON.stringify(existingReviews));
         alert("Review saved!");
+        window.location.reload(); // Refresh the page
+        inputValue = ""; // Clear the input field
     };
 
     const savedReview = localStorage.getItem("review") || "";
