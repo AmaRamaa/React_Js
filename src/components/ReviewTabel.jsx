@@ -29,9 +29,6 @@ function ReviewTabel() {
         border: "none",
         fontSize: "16px",
     };
-
-    const storedData = JSON.parse(localStorage.getItem("reviewData")) || [];
-
     return (
         <>
             <h1 style={{ textAlign: "center", marginBottom: "20px" }}>Ratings</h1>
