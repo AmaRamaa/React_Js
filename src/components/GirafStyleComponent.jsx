@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button.jsx';
 import ProductImageClass from './ProductImage.jsx'
 import TitleProduct from './ProductTitle.jsx'
@@ -18,15 +18,25 @@ const GirafStyleComponent = () => {
         marginTop: "1rem",
         textAlign: "center",
     };
+
+    const [buttonClicked, setButtonClicked] = useState(false);
+
+
+
+
+
     return (
         <>
             <div style={productCardClass}>
                 <ProductImageClass />
+                <Button 
+                    buttonClicked={buttonClicked} 
+                    setButtonClicked={() => setButtonClicked(!buttonClicked)} 
+                />
                 <div style={productDetailsClass}>
                     <TitleProduct />
                     <PricingProduct />
                 </div>
-                <Button />
             </div>
         </>
     );

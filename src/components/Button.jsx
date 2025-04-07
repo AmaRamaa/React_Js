@@ -1,23 +1,27 @@
 import React from 'react';
 
-
-const Button = () => {
-    const wishlistButtonClass = {
-        backgroundColor: "transparent",
-        border: "none",
-        color: "#e53e3e",
-        fontSize: "1.25rem",
-        cursor: "pointer",
-        marginTop: "1rem",
-        transition: "color 0.2s",
-        ":hover": {
-            color: "#c53030",
-        },
+const Button = ({ buttonClicked, setButtonClicked }) => {
+    const buttonStyle = {
+        position: 'relative',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        bottom: '2.6rem',
+        left: '85%',
+        backgroundColor: buttonClicked ? 'red' : 'grey',
+        color: 'white',
+        border: 'none',
+        padding: '0.5rem 1rem',
+        borderRadius: '0.25rem',
+        cursor: 'pointer',
     };
+
     return (
-        <>   
-            <button style={wishlistButtonClass}>♡</button>
-        </>
+        <button style={buttonStyle} onClick={setButtonClicked}>
+            <span style={{ color: buttonClicked ? 'white' : 'grey' }}>
+                🤍
+            </span>
+        </button>
     );
 };
 
