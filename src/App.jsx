@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react'
 import './App.css'
+import FeedbackData from './data/feedbackData'
+import Card from './components/Card.jsx'
+console.log(FeedbackData)
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [feedbackData, setFeedbackData] = useState(FeedbackData)
+  const deleteFeedBack = (id) => {
+    if (window.confirm(`Are you sure you want to delete feedback with id: ${id}?`)) {
+      console.log(`Delete feedback with id: ${id}`);
+      setFeedbackData((prevFeedback) => prevFeedback.filter((item) => item.id !== id));
+    } else {
+      console.log(`Deletion canceled for feedback with id: ${id}`);
+    }
+  };
+  console.log(feedbackData)
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    < >
+      <h1>Feedback List</h1>
+
+      <div style={{ gap: '50px', justifyContent: 'Center', alignContent: 'cetner', border: '1px solid #ccc', borderRadius: '8px', padding: '16px' }}>
+        {feedbackData.map((item) => (
+          console.log(item),
+          <Card
+            key={item.id}
+            title={item.text}
+            rating={item.rating}
+            src={item.src}
+            deleteFeedBack={() => 
+              deleteFeedBack(item.id)
+              // console.log(`Delete feedback with id: ${item.id}`)
+          }
+          />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
 
-export default App
+export default App;
