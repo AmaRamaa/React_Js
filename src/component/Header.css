@@ -1,0 +1,59 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header-left span {
+    font-size: 14px;
+    color: #333;
+}
+
+.last-updated {
+    font-style: italic;
+    color: #666;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.user-status {
+    font-size: 14px;
+    color: #888;
+}
+
+.progress-bar {
+    position: relative;
+    height: 5px;
+    width: 100%;
+    background-color: #e0e0e0;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #4caf50;
+    animation: loading 2s infinite;
+}
+

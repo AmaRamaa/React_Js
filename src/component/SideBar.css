@@ -1,26 +1,33 @@
 /* SideBar.css */
-.sidebar {
+
+.sidebar-inner {
     width: 250px;
-    height: 100vh;
-    background-color: #f8f9fa;
+    height: 92vh;
+    background-color: #ffffff; /* Clean white for a modern look */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Softer shadow for subtle depth */
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Fixed incomplete property */
+    font-size: 1rem; /* Adjusted for better readability */
+    color: #333;
+    border-radius: 25px;
 }
 
-.sidebar-header {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.sidebar-search input {
-    width: 100%;
+.sidebar-search input[type="text"] {
+    width: 90%;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
     margin-bottom: 20px;
-    font-size: 14px;
+    border: 1px solid #ddd; /* Softer border color */
+    border-radius: 8px; /* Slightly more rounded corners */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.sidebar-search input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .sidebar-menu {
@@ -30,20 +37,21 @@
 }
 
 .sidebar-item {
+    margin: 10px 0;
     padding: 10px 15px;
-    font-size: 16px;
-    color: #333;
+    border-radius: 5px; /* Rounded corners for better aesthetics */
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.sidebar-item:hover {
-    background-color: #e9ecef;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
 }
 
 .sidebar-item.active {
-    background-color: #e0e7ff;
-    color: #4f46e5;
-    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold; /* Highlight active item */
+}
+
+.sidebar-item:hover {
+    background-color: #0056b3; /* Slightly darker blue for hover */
+    color: #fff;
+    transform: translateX(5px); /* Subtle movement effect */
 }
