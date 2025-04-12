@@ -11,7 +11,7 @@ const Header = ({ isLoading, lastUpdated, userName, userStatus }) => {
                 <span className="last-updated">Last updated: {lastUpdated || 'N/A'}</span>
             </div>
             <div className="header-right">
-                <img src="https://via.placeholder.com/150" alt=" " />
+                <img src="https://picsum.photos/seed/${Math.random()}/300/300" alt=" " />
                 <span className="user-name">{userName || 'User'}</span>
                 <span className="user-status">{userStatus || 'N/A'}</span>
             </div>

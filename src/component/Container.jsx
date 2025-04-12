@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Overview from './Pages/Overview.jsx';
 import Analytics from './Pages/Analytics.jsx';
-import Products from './Pages/Products.jsx';
+import ProductsTable from './Pages/ProductsTable.jsx';
 import Tags from './Pages/Tags.jsx';
 import Members from './Pages/Members.jsx';
 import Inquiries from './Pages/Inquires.jsx'; // Ensure the file exists and has the correct extension
-
+import ProductsStore from './Pages/ProductsStore.jsx'; // Ensure the file exists and has the correct extension
+import ProductsCreate from './Pages/ProductsCreate.jsx'; // Ensure the file exists and has the correct extension
 
 
 const Container = ({ inPutItem }) => {
-    console.log('Input Item from Container:', inPutItem); // Log the input item to the console
 
     const [activePage, setActivePage] = useState('Overview'); // Default to 'Overview'
 
     useEffect(() => {
-        if (inPutItem && inPutItem !== 'Overview') {
-            setActivePage(inPutItem);
-        }
+        setActivePage(inPutItem || 'Overview');
     }, [inPutItem]);
 
     const renderContent = () => {
@@ -25,14 +23,18 @@ const Container = ({ inPutItem }) => {
                 return <Overview />;
             case 'Analytics':
                 return <Analytics />;
-            case 'Products':
-                return <Products />;
+            case 'ProductsTable':
+                return <ProductsTable />;
             case 'Tags+':
                 return <Tags />;
             case 'Members':
                 return <Members />;
             case 'Inquiries':
                 return <Inquiries />;
+            case 'ProductsStore':
+                return <ProductsStore />;
+            case 'ProductsCreate':
+                return <ProductsCreate />;
             default:
                 return <h1>Page not found </h1>;
         }

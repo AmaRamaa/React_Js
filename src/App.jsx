@@ -24,7 +24,8 @@ function App() {
           <Header selectedItem={inPutItem}/>
         </div>
         <div className="container">
-          <Container inPutItem={inPutItem} onInputChange={handleInputChange} />
+          <Container inPutItem={inPutItem} onInputChange={handleInputChange} /> 
+          {/* this is the routing Function */}
         </div>
       </div>
     </div>

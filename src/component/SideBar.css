@@ -3,7 +3,7 @@
 .sidebar-inner {
     width: 250px;
     height: 92vh;
-    background-color: #ffffff; /* Clean white for a modern look */
+    background-color: #f9f9f9; /* Clean white for a modern look */
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Softer shadow for subtle depth */
     padding: 20px;
     font-family: 'Arial', sans-serif;
@@ -12,7 +12,7 @@
     justify-content: flex-start; /* Fixed incomplete property */
     font-size: 1rem; /* Adjusted for better readability */
     color: #333;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 .sidebar-search input[type="text"] {
@@ -54,4 +54,45 @@
     background-color: #0056b3; /* Slightly darker blue for hover */
     color: #fff;
     transform: translateX(5px); /* Subtle movement effect */
+}
+
+.sidebar-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 20px; /* Indent submenu items */
+}
+
+.sidebar-submenu .submenu-item {
+    margin: 5px 0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-submenu .submenu-item:hover {
+    background-color: #e9ecef; /* Light gray for hover effect */
+    color: #333;
+}
+
+.sidebar-item-mod {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners for better aesthetics */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    background-color: #f8f9fa; /* Light background for default state */
+    color: #495057; /* Subtle text color */
+}
+
+.sidebar-item-mod:hover {
+    background-color: #e9ecef; /* Light gray for hover effect */
+    color: #212529; /* Darker text color on hover */
+    transform: translateX(5px); /* Subtle movement effect */
+}
+
+.sidebar-item-mod.active {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold; /* Highlight active item */
 }

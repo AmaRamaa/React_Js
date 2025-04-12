@@ -21,6 +21,7 @@
   margin: 10px;
   padding: 10px;
   border-radius: 8px;
+  gap: 11px;
 }
 
 .header {
@@ -31,13 +32,14 @@
   border-radius: 8px;
   margin-bottom: 10px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .container {
   flex: 1;
-  padding: 10px;
+  padding: 25px;
   background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
 }
