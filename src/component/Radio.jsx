@@ -1,19 +1,15 @@
 import React from 'react';
 
-const Radio = ({ rating, selected, handleChange, ...props }) => {
+const Radio = ({ type = "radio", id, name, value, onChange, checked }) => {
     return (
-        <div>
-            <input
-                type="radio"
-                id={`rating-${rating}`}
-                name="rating"
-                value={rating}
-                checked={selected === rating}
-                onChange={handleChange}
-                {...props} // Spread additional props here
-            />
-            <label htmlFor={`rating-${rating}`}>{rating}</label>
-        </div>
+        <input
+            type={type}
+            id={id}
+            name={name}
+            value={value}
+            onChange={onChange}
+            checked={checked}
+        />
     );
 };
 

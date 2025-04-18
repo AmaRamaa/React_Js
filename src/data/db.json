@@ -1,34 +1,14 @@
 {
   "FeedbackData": [
     {
-      "id": 1,
-      "text": "Great service and friendly staff.",
-      "rating": 5
+      "text": "This is the final Feedback Test.",
+      "rating": 10,
+      "id": "4f21"
     },
     {
-      "id": 2,
-      "text": "The product quality could be improved.",
-      "rating": 3
-    },
-    {
-      "id": 3,
-      "text": "Fast delivery but packaging was damaged.",
-      "rating": 4
-    },
-    {
-      "id": "ef18",
-      "feedback": "12323232232",
-      "rating": 0
-    },
-    {
-      "id": "8a10",
-      "feedback": "1232223222",
-      "rating": 5
-    },
-    {
-      "id": "7fac",
-      "feedback": "1232232222",
-      "rating": 0
+      "text": "This is Egzons Feedback",
+      "rating": 0,
+      "id": "85a7"
     }
   ]
 }
