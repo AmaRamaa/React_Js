@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Radio = ({ rating, selected, handleChange }) => {
+const Radio = ({ rating, selected, handleChange, ...props }) => {
     return (
         <div>
             <input
@@ -10,6 +10,7 @@ const Radio = ({ rating, selected, handleChange }) => {
                 value={rating}
                 checked={selected === rating}
                 onChange={handleChange}
+                {...props} // Spread additional props here
             />
             <label htmlFor={`rating-${rating}`}>{rating}</label>
         </div>
